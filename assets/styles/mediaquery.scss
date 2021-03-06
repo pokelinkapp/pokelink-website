@@ -1,0 +1,25 @@
+@mixin mediaquery($class) {
+  @if $class == mobile {
+    @media (max-width: 699px) { @content; }
+  }
+
+  @else if $class == tablet {
+    @media (min-width: 600px) { @content; }
+  }
+
+  @else if $class == tablet-landscape {
+    @media (min-width: 900px) { @content; }
+  }
+
+  @else if $class == desktop {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else if $class == desktop-large {
+    @media (min-width: 1800px) { @content; }
+  }
+
+  @else {
+    @warn "Media mixin supports: mobile, tablet, tablet-landscape, desktop, desktop-large";
+  }
+}
