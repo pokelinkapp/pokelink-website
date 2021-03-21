@@ -44,7 +44,12 @@ export default Vue.extend({
       </ul>
       <p>
         You can review our privacy policy here -
-        http://pokelink.cybershade.org/privacy-policy.html
+        <a
+          href="http://assets.pokelink.xyz/privacy-policy.html"
+          target="_blank"
+        >
+          http://assets.pokelink.xyz/privacy-policy.html
+        </a>
       </p>
       <p>
         By using the app - you agree to this. (Basically by using the app,
