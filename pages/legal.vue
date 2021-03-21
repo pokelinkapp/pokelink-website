@@ -3,7 +3,7 @@ import Vue from 'vue';
 
 export default Vue.extend({
   mounted() {
-    this.$nuxt.$emit('page', 'home');
+    this.$nuxt.$emit('page', 'legal');
   },
 });
 </script>
@@ -11,7 +11,7 @@ export default Vue.extend({
 <template>
   <div class="container">
     <div>
-      <h1 class="title">Pokelink home content</h1>
+      <h1 class="title">Pokelink legal content</h1>
     </div>
   </div>
 </template>

@@ -1,7 +1,15 @@
 <script>
 import image from '../assets/img/jolteon.jpg';
+import Twitter from '../assets/icons/twitter.svg?inline';
+import Facebook from '../assets/icons/fb.svg?inline';
+import Patreon from '../assets/icons/patreon.svg?inline';
 export default {
   name: 'Navigation',
+  components: {
+    Twitter,
+    Facebook,
+    Patreon,
+  },
   props: {
     side: {
       type: String,
@@ -15,9 +23,6 @@ export default {
       type: String,
       default: '#FFDE53',
     },
-  },
-  mounted() {
-    console.log(this.image);
   },
 };
 </script>
@@ -40,6 +45,25 @@ export default {
         </li>
         <li>
           <NuxtLink to="/contact">Contact us</NuxtLink>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="navigation__social">
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer" title="Twitter"
+            ><Twitter
+          /></a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer" title="Facebook"
+            ><Facebook
+          /></a>
+        </li>
+        <li>
+          <a href="" target="_blank" rel="noopener noreferrer" title="Patreon"
+            ><Patreon
+          /></a>
         </li>
       </ul>
     </nav>
@@ -70,14 +94,30 @@ export default {
     flex-direction: column;
     width: 25vw;
     padding: 100px;
+    padding-right: 0;
+    z-index: 1;
 
     a {
       font-size: 20px;
-      color: black;
+      color: #242426;
       line-height: 24px;
       font-weight: 900;
       text-decoration: none;
       text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+      position: relative;
+
+      &.nuxt-link-exact-active:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: #242426;
+        position: absolute;
+        left: -40px;
+        top: 2px;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -87,7 +127,7 @@ export default {
 
   &__pkmn-wrapper {
     height: 100vh;
-    width: 50vh;
+    width: 25vw;
     position: fixed;
     top: 0;
 
@@ -98,10 +138,6 @@ export default {
         right: -100%;
         align-items: flex-end;
       }
-
-      .navigation__pkmn-img {
-        margin-right: 10%;
-      }
     }
 
     &--right {
@@ -111,10 +147,22 @@ export default {
         left: -100%;
         align-items: flex-start;
       }
+    }
+  }
 
-      .navigation__pkmn-img {
-        margin-left: 10%;
-      }
+  &__social {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 100px;
+    display: flex;
+
+    a {
+      margin-right: 20px;
+    }
+
+    a svg {
+      width: 24px;
     }
   }
 
@@ -130,6 +178,10 @@ export default {
     justify-content: center;
     flex-direction: column;
     position: absolute;
+
+    &-img {
+      margin-left: 10%;
+    }
   }
 }
 </style>
