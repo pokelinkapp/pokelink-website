@@ -12,6 +12,11 @@ export default Vue.extend({
       },
     };
   },
+  head() {
+    return {
+      title: 'Pokélink | About',
+    };
+  },
 });
 </script>
 

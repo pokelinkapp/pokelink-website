@@ -20,6 +20,11 @@ export default Vue.extend({
       },
     };
   },
+  head() {
+    return {
+      title: 'Pokélink | How it works',
+    };
+  },
 });
 </script>
 
