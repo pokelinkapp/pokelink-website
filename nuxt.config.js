@@ -20,7 +20,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/styles/reset', '~/assets/styles/page-transition'],
+  css: ['~/assets/styles/reset', '~/assets/styles/main'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -38,7 +38,7 @@ export default {
       {
         families: {
           Montserrat: {
-            wght: [100, 400, 900],
+            wght: [100, 400, 500, 600, 700, 900],
           },
         },
       },

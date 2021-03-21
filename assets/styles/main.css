@@ -1,0 +1,46 @@
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity .5s
+}
+
+.page-enter,
+.page-leave-active,
+.layout-enter,
+.layout-leave-active {
+  opacity: 0
+}
+
+
+main {
+  width: 50vw;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  color: #242426;
+  box-sizing: border-box;
+}
+
+main.left {
+  margin-left: calc(25vh + 100px);
+}
+
+main.right {
+  margin-left: 50vw;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}

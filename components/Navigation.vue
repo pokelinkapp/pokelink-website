@@ -2,13 +2,13 @@
 import image from '../assets/img/jolteon.jpg';
 import Twitter from '../assets/icons/twitter.svg?inline';
 import Facebook from '../assets/icons/fb.svg?inline';
-import Patreon from '../assets/icons/patreon.svg?inline';
+import Discord from '../assets/icons/discord.svg?inline';
 export default {
   name: 'Navigation',
   components: {
     Twitter,
     Facebook,
-    Patreon,
+    Discord,
   },
   props: {
     side: {
@@ -51,7 +51,11 @@ export default {
     <nav>
       <ul class="navigation__social">
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer" title="Twitter"
+          <a
+            href="https://twitter.com/PokelinkApp"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Twitter"
             ><Twitter
           /></a>
         </li>
@@ -61,8 +65,12 @@ export default {
           /></a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer" title="Patreon"
-            ><Patreon
+          <a
+            href="https://discord.pokelink.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Discord"
+            ><Discord
           /></a>
         </li>
       </ul>
@@ -156,6 +164,7 @@ export default {
     left: 0;
     padding: 100px;
     display: flex;
+    z-index: 1;
 
     a {
       margin-right: 20px;

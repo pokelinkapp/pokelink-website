@@ -1,8 +1,16 @@
 <script lang="ts">
 import Vue from 'vue';
 import ghastly from '../assets/img/ghastly.jpg';
+import Multiplayer from '../assets/icons/multiplayer.svg?inline';
+import Support from '../assets/icons/support.svg?inline';
+import Customise from '../assets/icons/customize.svg?inline';
 
 export default Vue.extend({
+  components: {
+    Multiplayer,
+    Support,
+    Customise,
+  },
   data() {
     return {
       nav: {
@@ -22,14 +30,76 @@ export default Vue.extend({
       :image="nav.image"
       :background="nav.background"
     />
-    <div>
-      <h1 class="title">Pokelink how it works content</h1>
-    </div>
+    <main class="left">
+      <h1 class="sr-only">Features</h1>
+      <ul>
+        <li class="item">
+          <Multiplayer />
+          <div class="item__text">
+            <h2>Multiplayer</h2>
+            <p>
+              The multiplayer support allows you to easily imports a partners
+              Pokémon into your stream.
+            </p>
+          </div>
+        </li>
+        <li class="item">
+          <Support />
+          <div class="item__text">
+            <h2>Support</h2>
+            <p>
+              Auto tracking is currently supporting Pokémon versions
+              <span>Leaf Green</span>, <span>Emerald</span>,
+              <span>Platinum</span>, <span>White</span>, and <span>Black</span>.
+              For all other versions, Manual tracking is available.
+            </p>
+          </div>
+        </li>
+        <li class="item">
+          <Customise />
+          <div class="item__text">
+            <h2>Customise</h2>
+            <p>
+              Simple browser sources and easy to install custom themes for your
+              stream; with plenty of default choices!
+            </p>
+          </div>
+        </li>
+      </ul>
+    </main>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .container {
   display: block;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 30px;
+
+  svg {
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #e8536a;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 100;
+    width: 50%;
+
+    span {
+      font-weight: 600;
+    }
+  }
 }
 </style>
