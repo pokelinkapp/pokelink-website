@@ -38,7 +38,7 @@ export default {
       {
         families: {
           Montserrat: {
-            wght: [100, 400, 500, 600, 700, 900],
+            wght: [100, 200, 400, 500, 600, 700, 900],
           },
         },
       },

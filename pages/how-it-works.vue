@@ -25,6 +25,41 @@ export default Vue.extend({
       title: 'Pokélink | How it works',
     };
   },
+  computed: {
+    supportedVersions() {
+      const list = [
+        'Blue',
+        'Red',
+        'Yellow',
+        'Leaf Green',
+        'Fire Red',
+        'Ruby',
+        'Sapphire',
+        'Emerald',
+        'Diamond',
+        'Pearl',
+        'Platinum',
+        'Heart Gold',
+        'Soul Silver',
+        'Black',
+        'White',
+        'Black 2',
+        'White 2',
+        'X',
+        'Y',
+        'Omega Ruby',
+        'Alpha Sapphire',
+        'Sun',
+        'Moon',
+        'Ultra Sun',
+        'Ultra Moon',
+      ].map((title) => `<span>${title}</span>`);
+
+      const last = list.pop();
+
+      return list.join(', ') + ' and ' + last;
+    },
+  },
 });
 </script>
 
@@ -49,13 +84,12 @@ export default Vue.extend({
           </div>
         </li>
         <li class="item">
-          <Support />
+          <Support style="width: 221px; height: 50px" />
           <div class="item__text">
             <h2>Support</h2>
             <p>
               Auto tracking is currently supporting Pokémon versions
-              <span>Leaf Green</span>, <span>Emerald</span>,
-              <span>Platinum</span>, <span>White</span>, and <span>Black</span>.
+              <span v-html="supportedVersions"></span>
               For all other versions, Manual tracking is available.
             </p>
           </div>
@@ -99,7 +133,7 @@ export default Vue.extend({
   p {
     font-size: 20px;
     line-height: 24px;
-    font-weight: 100;
+    font-weight: 200;
     width: 50%;
 
     span {

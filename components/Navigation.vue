@@ -1,13 +1,13 @@
 <script>
 import image from '../assets/img/jolteon.jpg';
 import Twitter from '../assets/icons/twitter.svg?inline';
-import Facebook from '../assets/icons/fb.svg?inline';
 import Discord from '../assets/icons/discord.svg?inline';
+import Patreon from '../assets/icons/patreon.svg?inline';
 export default {
   name: 'Navigation',
   components: {
     Twitter,
-    Facebook,
+    Patreon,
     Discord,
   },
   props: {
@@ -60,8 +60,12 @@ export default {
           /></a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer" title="Facebook"
-            ><Facebook
+          <a
+            href="https://www.patreon.com/join/pokelink"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Patreon"
+            ><Patreon
           /></a>
         </li>
         <li>

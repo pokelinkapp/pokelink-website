@@ -82,7 +82,7 @@ p,
 ul {
   margin-bottom: 40px;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 li {

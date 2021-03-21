@@ -47,6 +47,6 @@ h1 {
 
 p {
   font-size: 40px;
-  font-weight: 100;
+  font-weight: 200;
 }
 </style>
